@@ -1,0 +1,2 @@
+module StructKoans
+end

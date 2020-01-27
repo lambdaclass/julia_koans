@@ -1,0 +1,2 @@
+module ValueTypeKoans
+end
