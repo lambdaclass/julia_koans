@@ -1,0 +1,2 @@
+module MultipleDispatchKoans
+end
