@@ -88,6 +88,15 @@ using FunctionKoans
 @testset "Functions" begin
 end
 
+using HighOrderFunctionKoans
+@testset "High Order Functions" begin
+    f = (x, y) -> x + y
+    @test HighOrderFunctionKoans.round_list([1.5, 2.3, 4.7]) == [2.0, 2.0, 5.0]
+    @test HighOrderFunctionKoans.apply_fn(f, 7) == 12
+    @test HighOrderFunctionKoans.add_n([1, 2, 4, 5],  3) == [4, 5, 7, 8]
+    @test HighOrderFunctionKoans.remove_multiples([10, 12, 15, 18, 20], 3) == [10, 20]
+end
+
 using MethodKoans
 @testset "Methods" begin
 end
