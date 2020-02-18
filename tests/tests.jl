@@ -94,6 +94,12 @@ end
 
 using MultipleDispatchKoans
 @testset "Multiple Dispatch" begin
+    dog = MultipleDispatchKoans.Dog("goodboi")
+    cat = MultipleDispatchKoans.Cat("Sir Catcelot")
+    @test MultipleDispatchKoans.hello() == "hello stranger"
+    @test MultipleDispatchKoans.hello("julia") == "hello julia"
+    @test MultipleDispatchKoans.pet_talk(dog) == "$(dog.name): bark"
+    @test MultipleDispatchKoans.pet_talk(cat) == "$(cat.name): meow"
 end
 
 using ValueTypeKoans
