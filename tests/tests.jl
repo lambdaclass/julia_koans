@@ -92,6 +92,12 @@ using MethodKoans
 @testset "Methods" begin
 end
 
+using DestructuringKoans
+@testset "Destructuring" begin
+    @test DestructuringKoans.add_separately(1+2im, 3-7im) == (4, -5)
+    @test DestructuringKoans.add_coordinates((2, 3), (4, -1)) == (6, 2)
+end
+
 using MultipleDispatchKoans
 @testset "Multiple Dispatch" begin
 end
