@@ -1,3 +1,3 @@
 
 all:
-	julia tests/tests.jl
+	julia --color=yes tests/tests.jl
