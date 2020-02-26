@@ -1,5 +1,13 @@
 module DataFramesKoans
 
+#=
+Links:
+    - http://juliadata.github.io/DataFrames.jl/stable/man/getting_started/
+    - https://github.com/JuliaData/CSV.jl
+
+Dataset: https://github.com/justmarkham/DAT8/blob/master/data/chipotle.tsv
+=#
+
 using Pkg
 Pkg.add("DataFrames")
 Pkg.add("CSV")
