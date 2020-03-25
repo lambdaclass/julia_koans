@@ -101,6 +101,12 @@ using MethodKoans
 @testset "Methods" begin
 end
 
+using DestructuringKoans
+@testset "Destructuring" begin
+    @test DestructuringKoans.add_separately(1+2im, 3-7im) == (4, -5)
+    @test DestructuringKoans.add_coordinates((2, 3), (4, -1)) == (6, 2)
+end
+
 using MultipleDispatchKoans
 @testset "Multiple Dispatch" begin
     dog = MultipleDispatchKoans.Dog("goodboi")
@@ -135,4 +141,16 @@ using DataFramesKoans
     @test DataFramesKoans.most_expensive_item(df) == ("Chips and Fresh Tomato Salsa", 44.25)
     @test DataFramesKoans.orders_with_items_more_than_amount_and_price(df, 5, 10.0) == [1443, 1559, 1660]
     @test DataFramesKoans.most_ordered_item(df) == ("Chicken Bowl", 761)
+end
+
+using PythonInterop
+@testset "Python Interop" begin
+    @test PythonInterop.py_sinpi(0) == 0
+    @test round(PythonInterop.py_sinpi(1/pi), Base.Rounding.RoundToZero, digits=2) == 0.84
+
+    pyfib = PythonInterop.get_pyfib()
+    @test PythonInterop.jlfib(1, PythonInterop.jlfib) == 1
+    @test PythonInterop.jlfib(5, PythonInterop.jlfib) == 5
+    @test PythonInterop.jlfib(5, pyfib) == 5
+    @test PythonInterop.jlfib(7, pyfib) == 13
 end
