@@ -65,9 +65,9 @@ using ComplexNumberKoans
     @test ComplexNumberKoans.conjugate(1 + 1im) == 1 - 1im
     @test ComplexNumberKoans.absolute_value(1 + 1im) == sqrt(2)
     @test ComplexNumberKoans.absolute_value(1 - 2im) == sqrt(5)
-    @test ComplexNumberKoans.angle_in_grades(-2im) == deg2rad(-90)
-    @test ComplexNumberKoans.angle_in_grades(-1) == deg2rad(180)
-    @test ComplexNumberKoans.angle_in_grades(1 + 1im) == deg2rad(45)
+    @test ComplexNumberKoans.angle_in_radians(-2im) == deg2rad(-90)
+    @test ComplexNumberKoans.angle_in_radians(-1) == deg2rad(180)
+    @test ComplexNumberKoans.angle_in_radians(1 + 1im) == deg2rad(45)
 end
 
 using StringKoans
