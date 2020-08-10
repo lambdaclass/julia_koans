@@ -42,6 +42,32 @@ end
 
 using ComplexNumberKoans
 @testset "Complex Numbers" begin
+    @test ComplexNumberKoans.sum(1 + 1im, 1 + 1im) == 2 + 2im
+    @test ComplexNumberKoans.sum(1im, 1) == 1 + 1im
+    @test ComplexNumberKoans.sum(1 + 1im, -1 - 1im) == 0 + 0im
+    @test ComplexNumberKoans.substract(1 + 1im, -1 - 1im) == 2 + 2im
+    @test ComplexNumberKoans.substract(1, -1im) == 1 + 1im
+    @test ComplexNumberKoans.multiplication(1im, 1im) == -1
+    @test ComplexNumberKoans.multiplication(1, 1im) == 1im
+    @test ComplexNumberKoans.multiplication(1 + 2im, 3 + 2im) == -1 + 8im
+    @test ComplexNumberKoans.division(1 + 2im, 1 - 2im) == -0.6 + 0.8im
+    @test ComplexNumberKoans.power(im, 2) == -1
+    @test ComplexNumberKoans.power(im, 3) == -1im
+    @test ComplexNumberKoans.power(1 + im, 2) == 2im
+    @test ComplexNumberKoans.square_root(2) == sqrt(2)
+    @test ComplexNumberKoans.square_root(-1 + 0im) == im
+    @test ComplexNumberKoans.real_part(1 + 1im) == 1
+    @test ComplexNumberKoans.real_part(-2 + 1im) == -2
+    @test ComplexNumberKoans.imaginary_part(-2 + 1im) == 1
+    @test ComplexNumberKoans.imaginary_part(-2) == 0
+    @test ComplexNumberKoans.imaginary_part(-2im) == -2
+    @test ComplexNumberKoans.conjugate(-2im) == 2im
+    @test ComplexNumberKoans.conjugate(1 + 1im) == 1 - 1im
+    @test ComplexNumberKoans.absolute_value(1 + 1im) == sqrt(2)
+    @test ComplexNumberKoans.absolute_value(1 - 2im) == sqrt(5)
+    @test ComplexNumberKoans.angle_in_grades(-2im) == deg2rad(-90)
+    @test ComplexNumberKoans.angle_in_grades(-1) == deg2rad(180)
+    @test ComplexNumberKoans.angle_in_grades(1 + 1im) == deg2rad(45)
 end
 
 using StringKoans
