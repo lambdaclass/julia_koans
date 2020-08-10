@@ -1,6 +1,6 @@
 module ComplexNumberKoans
 #=
-the functions expect complex numbers with the sintax x = 1 + 1im
+the functions expect complex numbers with the syntax x = 1 + 1im
 =#
 
 function sum(x,y)
