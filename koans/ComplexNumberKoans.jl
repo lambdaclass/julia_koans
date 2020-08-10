@@ -33,7 +33,7 @@ end
 function absolute_value(x)
 end
 
-function angle_in_grades(x)
+function angle_in_radians(x)
 end
 
 end

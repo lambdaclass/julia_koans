@@ -46,7 +46,7 @@ function absolute_value(x)
     return abs(x)
 end
 
-function angle_in_grades(x)
+function angle_in_radians(x)
     return angle(x)
 end
 
