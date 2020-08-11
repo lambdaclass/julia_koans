@@ -34,7 +34,7 @@ function scalar_vector_multiplication(vec, k)
 end
 
 function scalar_product(x, y)
-    return dot(x,y)
+    return dot(x, y)
 end
 
 function norm_l2(x)
