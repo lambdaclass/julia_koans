@@ -49,7 +49,7 @@ using StringKoans
 end
 
 using ConversionKoans
-@testset "Conversion & promotion operations" begin
+@testset "Conversion operations" begin
     @test ConversionKoans.type_of(4) == Int64
     @test ConversionKoans.type_of([3, 4]) == Array{Int64,1}
     @test ConversionKoans.type_of(3.5 + im) == Complex{Float64}
