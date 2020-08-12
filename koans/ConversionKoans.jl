@@ -16,13 +16,13 @@ end
 
 function define_YourType(int, float)
     #=
-    define a type YouType above, it receive an Int64 and a Float64
+    define a type YourType above, it receives an Int64 and a Float64
     =#
 end
 
 function convertion_vector_to_MyTypeComplex(vec)
     #=
-    define the conversion, from vec[::Float64, ::Float64] to MyType defined above to use the function convert
+    define the conversion, from vec[::Float64, ::Float64] to MyType defined above and use the function convert
     =#
 end
 
