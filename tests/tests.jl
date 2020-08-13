@@ -60,23 +60,23 @@ using ArrayKoans
     @test ArrayKoans.array_2d() == [0 0 ; 0 0]
     @test ArrayKoans.array_shape(zeros(3,4,5)) == (3, 4, 5)
     @test ArrayKoans.array_shape([2 3 4 5]) == (1, 4)
-    @test ArrayKoans.array_shape([2,3,4,5]) == (4,)
-    @test ArrayKoans.array_dimension([2,3,4,5]) == 1
+    @test ArrayKoans.array_shape([2, 3, 4, 5]) == (4,)
+    @test ArrayKoans.array_dimension([2, 3, 4, 5]) == 1
     @test ArrayKoans.array_dimension([2 5 3; 4 5 3; 5 6 3]) == 2
-    @test ArrayKoans.num_elements([2,3,4,5]) == 4
-    @test ArrayKoans.num_elements([2,5]) == 2
+    @test ArrayKoans.num_elements([2, 3, 4, 5]) == 4
+    @test ArrayKoans.num_elements([2, 5]) == 2
     @test length(ArrayKoans.empty_array(Int64)) == 0
-    @test typeof(ArrayKoans.empty_array(Int64)) == Array{Int64,1}
-    @test typeof(ArrayKoans.empty_array(Float64)) == Array{Float64,1}
+    @test typeof(ArrayKoans.empty_array(Int64)) == Array{Int64, 1}
+    @test typeof(ArrayKoans.empty_array(Float64)) == Array{Float64, 1}
     @test ArrayKoans.range_array(1,5,1) == [1, 2, 3, 4, 5]
     @test ArrayKoans.filled_array(2,(2,2)) == [ 2 2; 2 2]
     @test ArrayKoans.filled_array(3,(2,3)) == [3 3 3;3 3 3]
     @test ArrayKoans.filled_array(3,(3,3,2))[:, :, 1] == [3 3 3; 3 3 3; 3 3 3]
     @test ArrayKoans.filled_array(3,(3,3,2))[:, :, 2] == [3 3 3; 3 3 3; 3 3 3]
-    @test ArrayKoans.reshape_array([3 3; 3 3])== [3,3,3,3]
+    @test ArrayKoans.reshape_array([3 3; 3 3])== [3, 3, 3, 3]
     @test size(ArrayKoans.reshape_array([3 3; 3 3])) == (4,)
-    @test size(ArrayKoans.reshape_array(zeros(3,3,4))) == (36,)
-    @test size(ArrayKoans.copy_shape(a)) == (3,3,4)
+    @test size(ArrayKoans.reshape_array(zeros(3, 3, 4))) == (36,)
+    @test size(ArrayKoans.copy_shape(a)) == (3, 3, 4)
     @test repr(UInt64(pointer_from_objref(ArrayKoans.copy_shape(a)))) != repr(UInt64(pointer_from_objref(a)))
     @test ArrayKoans.entire_column([2 3; 4 5], 1) == [2, 4]
     @test ArrayKoans.entire_column([1 0 9; 4 5 6], 2) == [0, 5]
