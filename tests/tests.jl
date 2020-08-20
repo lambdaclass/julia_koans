@@ -1,4 +1,5 @@
 push!(LOAD_PATH, "./koans")
+
 using Test
 
 using ArithmeticKoans
