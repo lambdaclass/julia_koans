@@ -1,6 +1,6 @@
 # Julia Koans
 
-Welcom to the Julia Koans, a set of Small exercises design to get you used to reading and writing Julia code!
+Welcome to the Julia Koans, a set of Small exercises design to get you used to reading and writing Julia code!
 These exercises are modeled on the Ruby Koans and Rustlings.
 
 ## Getting started
