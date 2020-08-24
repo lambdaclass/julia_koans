@@ -2,8 +2,14 @@ language: julia
   - 1.5
   - nightly
 
-matrix:
-    - PYTHON=Conda-python
+env:
+     global:
+    - PYTHON=conda
+
+
+before_install:
+    #install mpmath to test functionallity
+  - julia -e 'using Pkg; Pkg.add("Conda"); using Conda; Conda.add("numpy")';
 
 matrix:
   allow_failures:
