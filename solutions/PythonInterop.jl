@@ -1,7 +1,8 @@
 module PythonInterop
 
 using Pkg
-Pkg.add("PyCall")
+# Pkg.add("PyCall")
+Pkg.add(PackageSpec(name="PyCall", rev="master"))
 Pkg.checkout("PyCall")
 using PyCall
 
