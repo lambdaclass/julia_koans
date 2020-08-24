@@ -1,9 +1,8 @@
 module PythonInterop
 
-# using Pkg
-# # Pkg.add("PyCall")
-# Pkg.add(PackageSpec(name="PyCall", rev="master"))
-# using PyCall
+using Pkg
+Pkg.add("PyCall")
+using PyCall
 
 function __init__()
     py"""

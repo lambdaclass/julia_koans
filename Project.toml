@@ -1,4 +1,9 @@
+name = "JuliaKoans"
+authors = ["LambdaClass"]
+uuid="d7c490a2-3c7d-421b-8da6-553e0cddcf13"
+
 [deps]
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+
 [compat]
 PyCall = "1.91"
