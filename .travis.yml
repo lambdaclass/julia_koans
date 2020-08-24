@@ -7,7 +7,7 @@ matrix:
     - julia: nightly
 
 script:
-  - make
+  - make test_solutions
 
 branches:
   only:
