@@ -3,11 +3,11 @@ push!(LOAD_PATH, "./solutions")
 using Test
 
 
-using Pkg
-Pkg.clone(pwd())
-Pkg.add("PyCall")
-Pkg.test("PyCall", coverage=true)
-using PyCall
+# using Pkg
+# Pkg.clone(pwd())
+# Pkg.add("PyCall")
+# Pkg.test("PyCall", coverage=true)
+# using PyCall
 
 using ArithmeticKoans
 @testset "Arithmetic Operators" begin
