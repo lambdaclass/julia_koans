@@ -1,0 +1,24 @@
+language: julia
+  - 1.5
+  - nightly
+
+matrix:
+  allow_failures:
+    - julia: nightly
+
+script:
+  - make
+
+branches:
+  only:
+    - master
+
+deploy:
+  edge: true
+  provider: pages:git
+  deploy_key: github_deploy_key
+  skip_cleanup: true
+  verbose: true
+  local_dir: build
+  on:
+    branch: master
