@@ -3,6 +3,9 @@ language: julia
   - nightly
 
 matrix:
+    - PYTHON=Conda-python
+
+matrix:
   allow_failures:
     - julia: nightly
 
