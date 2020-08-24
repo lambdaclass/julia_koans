@@ -2,6 +2,7 @@ module PythonInterop
 
 using Pkg
 Pkg.add("PyCall")
+Pkg.checkout("PyCall")
 using PyCall
 
 function __init__()
