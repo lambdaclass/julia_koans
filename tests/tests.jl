@@ -1,4 +1,4 @@
-push!(LOAD_PATH, "./koans")
+push!(LOAD_PATH, "./solutions")
 
 using Test
 
@@ -75,6 +75,7 @@ using IterationKoans
     @test IterationKoans.efficient_vector_iteration([1, 3, 5, 6]) == [1, 6, 15, 24]
     @test IterationKoans.efficient_vector_iteration([0, 4, 2, 7]) == [0, 8, 6, 28]
     @test IterationKoans.chain_iterations([3, 4, 5], ['r', 'f']) == [3, 4, 5, 'r', 'f']
+    @test [i for i in IterationKoans.simultaneous_iteration([2,3,4], [4,5,6])] == [(2,4), (3,5), (4,6)]
 end
 
 using IterationKoans
