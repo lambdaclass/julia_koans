@@ -2,8 +2,7 @@ language: julia
   - 1.5
   - nightly
 
-env:
-     global:
+matrix:
     - PYTHON=conda
 
 matrix:
