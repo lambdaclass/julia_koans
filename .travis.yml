@@ -10,7 +10,7 @@ matrix:
     - julia: nightly
 
 script:
-  - julia -e 'import Pkg; Pkg.clone(pwd()); Pkg.build("PyCall"); Pkg.test("PyCall"; coverage=true)';
+  - julia -e 'import Pkg; Pkg.clone(pwd()); Pkg.build("PyCall"); Pkg.test("PyCall"; coverage=true); Conda.add("numpy")';
   - make test_solutions
 
 branches:
