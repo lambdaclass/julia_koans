@@ -2,7 +2,7 @@ module IterationKoans
 using IterTools
 
 #=
-    Iterations are important and frequently used in most common languages.
+    Iterations are important and frequently used in most common languages, specially working with data.
     Here are some useful links to the documentation regarding iterations in Julia:
         - https://docs.julialang.org/en/v1/base/iterators/
         - https://juliacollections.github.io/IterTools.jl/v0.2.1/
