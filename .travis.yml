@@ -11,7 +11,6 @@ matrix:
 
 
 script:
-  - julia -e 'using Pkg; Pkg.instantiate(); Pkg.build(); Pkg.test(; coverage=true)';
   - make test_solutions
 
 branches:
