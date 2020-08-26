@@ -1,7 +1,7 @@
 module PythonInterop
-
-using Pkg
-Pkg.add("PyCall")
+ENV["PYCALL_JL_RUNTIME_PYTHON"] = Sys.which("python")
+# using Pkg
+# Pkg.add("PyCall")
 using PyCall
 
 function __init__()
