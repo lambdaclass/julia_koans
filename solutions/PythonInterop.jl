@@ -1,7 +1,7 @@
 module PythonInterop
-ENV["PYTHON"] = "/usr/local/anaconda3/bin/python"
-# using Pkg
-# Pkg.add("PyCall")
+
+using Pkg
+Pkg.add("PyCall")
 using PyCall
 pushfirst!(PyVector(pyimport("sys")."path"), "")
 
