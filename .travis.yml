@@ -10,7 +10,7 @@ matrix:
     - julia: nightly
 
 script:
-  - julia -e 'ENV["PYCALL_JL_RUNTIME_PYTHON"] = Sys.which("python")';
+  - julia -e 'using Pkg; Pkg.instantiate(); Pkg.build(); Pkg.test(; coverage=true)';
   - make test_solutions
 
 branches:
