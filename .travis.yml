@@ -9,7 +9,7 @@ matrix:
   allow_failures:
     - julia: nightly
 
- before_install:
+before_install:
   - (sudo apt-get -qq update && sudo apt-get install -y python python-pip && sudo pip install)
   - julia -e 'ENV["PYTHON"]="python"; using Pkg; Pkg.add("PyCall"); Pkg.build("PyCall"); Pkg.add("Conda"); using Conda; Conda.update(); Conda.add("numpy");'
 
