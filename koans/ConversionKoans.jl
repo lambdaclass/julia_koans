@@ -1,5 +1,11 @@
 module ConversionKoans
 
+#=
+    Conversion allows to apply methods defined for the converted type.
+    Here is the basic documentation for conversion and promotion in Julia:
+        -https://docs.julialang.org/en/v1/manual/conversion-and-promotion/
+=#
+
 struct MyTypeComplex
            real::Float64
            imaginary::Float64
