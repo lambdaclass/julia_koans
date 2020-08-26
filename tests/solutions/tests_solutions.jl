@@ -2,13 +2,6 @@ push!(LOAD_PATH, "./solutions")
 
 using Test
 
-ENV["PYCALL_JL_RUNTIME_PYTHON"] = Sys.which("python")
-# using Pkg
-# Pkg.clone(pwd())
-# Pkg.add("PyCall")
-# Pkg.test("PyCall", coverage=true)
-using PyCall
-
 using ArithmeticKoans
 @testset "Arithmetic Operators" begin
     @test ArithmeticKoans.sum(1, 2) == 3

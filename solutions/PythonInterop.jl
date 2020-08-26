@@ -1,8 +1,9 @@
 module PythonInterop
-ENV["PYCALL_JL_RUNTIME_PYTHON"] = Sys.which("python")
+ENV["PYTHON"] = "/usr/local/anaconda3/bin/python"
 # using Pkg
 # Pkg.add("PyCall")
 using PyCall
+pushfirst!(PyVector(pyimport("sys")."path"), "")
 
 function __init__()
     py"""
