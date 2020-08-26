@@ -9,6 +9,10 @@ matrix:
   allow_failures:
     - julia: nightly
 
+ before_install:
+  - (sudo apt-get -qq update && sudo apt-get install -y python python-pip && sudo pip install
+  - julia -e 'ENV["PYTHON"]="python"; using Pkg; Pkg.add("PyCall"); Pkg.build("PyCall"); Pkg.add("Conda"); using Conda; Conda.update(); Conda.add("numpy");'
+
 script:
   - julia -e 'using Pkg; Pkg.instantiate(); Pkg.build(); Pkg.test(; coverage=true)';
   - make test_solutions
@@ -16,10 +20,6 @@ script:
 branches:
   only:
     - master
-
- before_install:
-  - (sudo apt-get -qq update && sudo apt-get install -y python python-pip && sudo pip install
-  - julia -e 'ENV["PYTHON"]="python"; using Pkg; Pkg.add("PyCall"); Pkg.build("PyCall"); Pkg.add("Conda"); using Conda; Conda.update(); Conda.add("numpy");'
 
 deploy:
   edge: true
