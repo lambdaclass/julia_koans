@@ -9,10 +9,6 @@ matrix:
   allow_failures:
     - julia: nightly
 
-before_install:
-  - sudo apt-get install python3
-  - which python
-  - julia -e 'ENV["PYTHON"]="python"; using Pkg; Pkg.add("PyCall"); Pkg.build("PyCall"); Pkg.add("Conda"); using Conda; Conda.update(); Conda.add("numpy");'
 
 script:
   - julia -e 'using Pkg; Pkg.instantiate(); Pkg.build(); Pkg.test(; coverage=true)';
