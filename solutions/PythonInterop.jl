@@ -1,8 +1,9 @@
 module PythonInterop
+using PyCall
+np = PyCall.pyimport("numpy")
 
 function __init__()
     py"""
-    import numpy as np
 
     def sinpi(x):
         return np.sin(np.pi * x)
