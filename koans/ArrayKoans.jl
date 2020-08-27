@@ -1,11 +1,25 @@
+ 
+# An array is the basic data structure to work with a collection of objects in Julia. This objects
+# can be of the same type or they can be of different types.
+# Arrays can even store another arrays inside of them, which becomes useful to work with matrices, among
+# other applications.
+
+# You can check the documentation to follow this koan
+# https://docs.julialang.org/en/v1/base/arrays/
+
+
 module ArrayKoans
 
-function array_1d(n)
-    # return a 1D array of zeros with length n
+
+function zeros_1d(n)
+    # A function that given an integer n, returns a 1D array with n zeros.
+    # Example: zeros_1d(3) = [0.0, 0.0, 0.0]
+
 end
 
-function array_2d()
-    # return a 2x2 matrix of zeros
+function zeros_2d(n)
+    # A function that given an integer n, returns a nxn matrix of zeros.
+    # Example: zeros_2d(2) = [0.0 0.0; 0.0 0.0]
 end
 
 function array_shape(array)
