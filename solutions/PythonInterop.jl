@@ -1,10 +1,5 @@
 module PythonInterop
 
-using Pkg
-Pkg.add("PyCall")
-using PyCall
-pushfirst!(PyVector(pyimport("sys")."path"), "")
-
 function __init__()
     py"""
     import numpy as np

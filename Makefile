@@ -1,8 +1,5 @@
 
-jlext = .jl
 test:
-
-	read -p "Enter file name: " file; \
 	julia --color=yes tests/tests;
 
 test_solutions:
