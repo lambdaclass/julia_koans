@@ -1,37 +1,60 @@
 module IndexingKoans
 
 #=
-    links:
+    Accesing data from arrays or dataframes is necessary to make use of these data
+    structures and learning how to index well can save you a lot of time. Here are some useful
+    links to the documentation of indexing in julia:
         - https://docs.julialang.org/en/v1/manual/arrays/#man-array-indexing-1
 =#
 
 function first_element(vector)
+    #=
+     return the fist element of the vector.
+     ex: vector = [7, 2, 4]; return 7
+    =#
     return vector[1]
 end
 
 function last_element(vector)
+    #=
+     return the last element of the vector.
+     ex: vector = [7, 2, 4]; return 4
+    =#
     return vector[end]
 end
 
 function range_indices(array)
-    # return all values of the 2D array except the first and the last columns
-    return array[:, 2:size(array)[2]-1]
+    #=
+     return all values of 2D array except for the first and the last columns
+     ex: array =2×4 Array   2  3  5  4        return   3  5
+                            9  5  0  10                5  0
+    =#    return array[:, 2:size(array)[2]-1]
 end
 
-function indexed_assignment(array)
-    # multiply x2 and replace the values of the first and the last columns of the 2D array
-    array[:,[1,end]] = 2*array[:,[1,end]]
+function indexed_assignment!(array)
+    #=
+     multiply x2 and replace the first and the last columns of the 2D array
+     ex: array =2×4 Array{Int64,2}   2  3  5  4        return   4  3  5  8
+                                     9  5  0  10                18 5  0  10
+    =#    array[:,[1,end]] = 2*array[:,[1,end]]
     return array
 end
 
-function elementwise_indexing_assigment(array, value)
-    # assign the value to each position in the first and second columns of the 2D array
+function elementwise_indexing_assigment!(array, value)
+    #=
+     assign the value to the first and second columns of the 2D array
+     ex: array =2×4 Array{Int64,2}   2  3  5  4 ; value = 0; return 0  0  5  8
+                                     9  5  0  10                   0  0  0  10
+    =#
     array[:,[1,2]] .= value
     return  array
 end
 
 function apply_mask(array, condition)
-    # return the values where the condition is true
+        #=
+    return the values where the condition is true
+    ex: array = [4, 5, 6, 0]; condition: x<5; return [ 4, 0]
+    =#
     return array[map( x-> condition(x), array)]
 end
 
