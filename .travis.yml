@@ -16,7 +16,7 @@ before_install:
 
 # Install packages
 install:
-  - conda install --yes python=$TRAVIS_PYTHON_VERSION numpy
+  - conda install --yes python=3.7 numpy
 
 script:
   - make test_solutions
