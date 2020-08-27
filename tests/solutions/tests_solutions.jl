@@ -121,14 +121,14 @@ end
 # @testset "Value Types" begin
 # end
 
-# using PythonInterop
-# @testset "Python Interop" begin
-#     @test PythonInterop.py_sinpi(0) == 0
-#     @test round(PythonInterop.py_sinpi(1/pi), Base.Rounding.RoundToZero, digits=2) == 0.84
+using PythonInterop
+@testset "Python Interop" begin
+    @test PythonInterop.py_sinpi(0) == 0
+    @test round(PythonInterop.py_sinpi(1/pi), Base.Rounding.RoundToZero, digits=2) == 0.84
 
-#     pyfib = PythonInterop.get_pyfib()
-#     @test PythonInterop.jlfib(1, PythonInterop.jlfib) == 1
-#     @test PythonInterop.jlfib(5, PythonInterop.jlfib) == 5
-#     @test PythonInterop.jlfib(5, pyfib) == 5
-#     @test PythonInterop.jlfib(7, pyfib) == 13
-# end
+    pyfib = PythonInterop.get_pyfib()
+    @test PythonInterop.jlfib(1, PythonInterop.jlfib) == 1
+    @test PythonInterop.jlfib(5, PythonInterop.jlfib) == 5
+    @test PythonInterop.jlfib(5, pyfib) == 5
+    @test PythonInterop.jlfib(7, pyfib) == 13
+end
