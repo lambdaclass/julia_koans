@@ -8,8 +8,7 @@ matrix:
 
 # Install packages
 install:
-  - pip install --upgrade pip setuptools wheel
-  - pip install --only-binary=numpy
+  - (sudo apt-get -qq update && sudo apt-get install -y python python-pip && sudo pip install numpy)
 
 script:
   - make test_solutions
