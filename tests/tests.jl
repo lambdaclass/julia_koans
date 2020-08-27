@@ -135,8 +135,8 @@ end
 
 using VectorOperationKoans
 @testset "Vector Operation" begin
-    @test VectorOperationKoans.vector_lenght([1,2,3]) == 3
-    @test VectorOperationKoans.vector_lenght([1]) == 1
+    @test VectorOperationKoans.vector_length([1,2,3]) == 3
+    @test VectorOperationKoans.vector_length([1]) == 1
     @test VectorOperationKoans.range_1_to_n(3) == [1, 2, 3]
     @test VectorOperationKoans.range_1_to_n(10) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     @test VectorOperationKoans.vector_of_zeros(3) == [0, 0, 0]
