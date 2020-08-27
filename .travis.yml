@@ -11,6 +11,7 @@ install:
   - (sudo apt-get -qq update && sudo apt-get install -y python python-pip && sudo pip install numpy)
 
 script:
+  - julia -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
   - make test_solutions
 
 branches:
