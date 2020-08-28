@@ -78,10 +78,6 @@ using IterationKoans
     @test [i for i in IterationKoans.simultaneous_iteration([2,3,4], [4,5,6])] == [(2,4), (3,5), (4,6)]
 end
 
-using IterationKoans
-@testset "Iteration" begin
-end
-
 using ModuleKoans
 @testset "Modules" begin
 end
