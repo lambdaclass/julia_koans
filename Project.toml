@@ -1,0 +1,10 @@
+name = "JuliaKoans"
+uuid = "d7c490a2-3c7d-421b-8da6-553e0cddcf13"
+authors = ["LambdaClass"]
+
+[deps]
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+PyCall = "1.91"
