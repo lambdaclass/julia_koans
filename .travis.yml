@@ -23,13 +23,3 @@ addons:
 branches:
   only:
     - master
-
-deploy:
-  edge: true
-  provider: pages:git
-  deploy_key: github_deploy_key
-  skip_cleanup: true
-  verbose: true
-  local_dir: build
-  on:
-    branch: master
