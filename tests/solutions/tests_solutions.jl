@@ -132,7 +132,7 @@ using DataFramesKoans
     df = DataFrame(CSV.File("chipotle.tsv"))
 
     @test DataFramesKoans.read_data() == df
-    @test DataFramesKoans.get_column_names(df) == [:order_id, :quantity, :item_name, :choice_description, :item_price]
+    @test DataFramesKoans.get_column_names(df) == ["order_id", "quantity", "item_name", "choice_description", "item_price"]
     @test DataFramesKoans.get_first_item_name(df) == "Chips and Fresh Tomato Salsa"
 
     DataFramesKoans.parse_item_price!(df)
