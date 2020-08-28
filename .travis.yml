@@ -19,7 +19,3 @@ addons:
     packages:
       - python-numpy
       - python3-numpy
-
-branches:
-  only:
-    - master
