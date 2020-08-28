@@ -49,7 +49,16 @@ using StringKoans
 end
 
 using ConversionKoans
-@testset "Type Conversions" begin
+@testset "Conversion operations" begin
+    @test ConversionKoans.type_of(4) == Int64
+    @test ConversionKoans.type_of([3, 4]) == Array{Int64,1}
+    @test ConversionKoans.type_of(3.5 + im) == Complex{Float64}
+    @test ConversionKoans.int_to_float64(3) == 3.0
+    @test ConversionKoans.int_to_float64(20) == 20.0
+    @test typeof(ConversionKoans.convertion_vector_to_MyTypeComplex([5,6])) == ConversionKoans.MyTypeComplex
+    @test typeof(ConversionKoans.convertion_vector_to_MyTypeComplex([-10.1,5.4])) == ConversionKoans.MyTypeComplex
+    @test typeof(ConversionKoans.define_YourType(1, 2.2)) == ConversionKoans.YourType
+    @test typeof(ConversionKoans.define_YourType(1, -3.0)) == ConversionKoans.YourType
 end
 
 using ArrayKoans
