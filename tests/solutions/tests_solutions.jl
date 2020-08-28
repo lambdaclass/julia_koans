@@ -68,9 +68,15 @@ end
 # @testset "Indexing" begin
 # end
 
-# using IterationKoans
-# @testset "Iteration" begin
-# end
+using IterationKoans
+@testset "Iteration" begin
+    @test IterationKoans.range_iteration(1, 5, 1) == 15
+    @test IterationKoans.range_iteration(0, 10.1, 0.1) == 515.1
+    @test IterationKoans.efficient_vector_iteration([1, 3, 5, 6]) == [1, 6, 15, 24]
+    @test IterationKoans.efficient_vector_iteration([0, 4, 2, 7]) == [0, 8, 6, 28]
+    @test IterationKoans.chain_iterations([3, 4, 5], ['r', 'f']) == [3, 4, 5, 'r', 'f']
+    @test [i for i in IterationKoans.simultaneous_iteration([2,3,4], [4,5,6])] == [(2,4), (3,5), (4,6)]
+end
 
 # using ModuleKoans
 # @testset "Modules" begin
