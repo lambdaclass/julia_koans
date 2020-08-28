@@ -159,6 +159,5 @@ using VectorOperationKoans
     @test VectorOperationKoans.norm_l2([4, -10]) == sqrt(116)
     @test VectorOperationKoans.euclidean_distance([1, 3], [3, 5]) == sqrt(8)
     @test VectorOperationKoans.euclidean_distance([3, 5, 8], [3, -5, 0]) == sqrt(164)
-
 end
 
