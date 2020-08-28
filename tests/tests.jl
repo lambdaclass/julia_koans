@@ -66,6 +66,14 @@ end
 
 using IndexingKoans
 @testset "Indexing" begin
+    f(x) = x>2
+    @test IndexingKoans.first_element([2, 3, 4 ,5, 5]) == 2
+    @test IndexingKoans.last_element([2, 3 , 4, 6, 5]) == 5
+    @test IndexingKoans.range_indices([2 3 4 6 5;2 3 4 6 5]) == [[3 4 6];  [3 4 6]]
+    @test IndexingKoans.range_indices([2 3 4 6 5; 2 3 4 8 5]) == ([[3 4 6]; [3 4 8]])
+    @test IndexingKoans.indexed_assignment([1 4 7; 2 5 8; 3 6 9]) == [2 4 14; 4 5 16; 6 6 18]
+    @test IndexingKoans.elementwise_indexing_assigment([1 4 7; 2 5 8; 3 6 9], 0) == [0 0 7; 0 0 8; 0 0 9]
+    @test IndexingKoans.return_values_if_condition([1 2 3 4 1; 4 5 5 1 4], f) == [4, 5, 3, 5, 4, 4]
 end
 
 using IterationKoans
