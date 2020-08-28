@@ -1,0 +1,21 @@
+language: julia
+  - 1.5
+  - nightly
+
+matrix:
+  allow_failures:
+    - julia: nightly
+
+# Install packages
+install:
+  - (sudo apt-get -qq update && sudo apt-get install -y python python-pip && sudo pip install numpy)
+
+script:
+  - julia -e 'using Pkg; Pkg.instantiate()'
+  - make test_solutions
+
+addons:
+  apt:
+    packages:
+      - python-numpy
+      - python3-numpy
