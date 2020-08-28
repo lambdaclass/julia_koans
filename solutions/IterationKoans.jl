@@ -7,6 +7,9 @@ using IterTools
         - https://docs.julialang.org/en/v1/base/iterators/
         - https://juliacollections.github.io/IterTools.jl/v0.2.1/
 =#
+using Pkg
+Pkg.add("IterTools")
+using IterTools
 
 function range_iteration(n, m, step)
     #=
