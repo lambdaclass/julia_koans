@@ -6,7 +6,7 @@ using PyCall
 
 function __init__()
     py"""
-    np = PyCall.pyimport("numpy")
+    import numpy as np
 
     def sinpi(x):
         return np.sin(np.pi * x)
