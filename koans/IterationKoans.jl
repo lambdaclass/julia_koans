@@ -1,4 +1,7 @@
 module IterationKoans
+
+using Pkg
+Pkg.add("IterTools")
 using IterTools
 
 #=
