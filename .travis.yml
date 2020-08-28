@@ -14,6 +14,12 @@ script:
   - julia -e 'using Pkg; Pkg.instantiate()'
   - make test_solutions
 
+addons:
+  apt:
+    packages:
+      - python-numpy
+      - python3-numpy
+
 branches:
   only:
     - master
