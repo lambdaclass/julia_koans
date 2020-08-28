@@ -108,7 +108,6 @@ using MethodKoans
     @test length(methods(MethodKoans.number_type_function)) == 1
     @test MethodKoans.same_type_function(3,4) == 7
     @test length(methods(MethodKoans.same_type_function)) == 1
-
 end
 
 using DestructuringKoans

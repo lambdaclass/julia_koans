@@ -97,9 +97,18 @@ using HighOrderFunctionKoans
     @test HighOrderFunctionKoans.remove_multiples([10, 12, 15, 18, 20], 3) == [10, 20]
 end
 
-# using MethodKoans
-# @testset "Methods" begin
-# end
+using MethodKoans
+@testset "Methods" begin
+    @test MethodKoans.one_type_function(4.1) == 4.1
+    @test length(methods(MethodKoans.one_type_function)) == 1
+    @test MethodKoans.number_type_function(3, 4) == 7
+    @test MethodKoans.number_type_function(3.1, 4) == 7.1
+    @test MethodKoans.number_type_function(3.1, 4.1) ≈ 7.2
+    @test MethodKoans.number_type_function(3, 4.1) == 7.1
+    @test length(methods(MethodKoans.number_type_function)) == 1
+    @test MethodKoans.same_type_function(3,4) == 7
+    @test length(methods(MethodKoans.same_type_function)) == 1
+end
 
 using DestructuringKoans
 @testset "Destructuring" begin
