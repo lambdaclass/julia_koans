@@ -121,6 +121,28 @@ using ValueTypeKoans
 @testset "Value Types" begin
 end
 
+using DataFramesKoans
+@testset "DataFrames" begin
+    using Pkg
+    Pkg.add("DataFrames")
+    Pkg.add("CSV")
+    using DataFrames
+    using CSV
+
+    df = DataFrame(CSV.File("chipotle.tsv"))
+
+    @test DataFramesKoans.read_data() == df
+    @test DataFramesKoans.get_column_names(df) == [:order_id, :quantity, :item_name, :choice_description, :item_price]
+    @test DataFramesKoans.get_first_item_name(df) == "Chips and Fresh Tomato Salsa"
+
+    DataFramesKoans.parse_item_price!(df)
+    @test df[1, 5] == 2.39
+
+    @test DataFramesKoans.most_expensive_item(df) == ("Chips and Fresh Tomato Salsa", 44.25)
+    @test DataFramesKoans.orders_with_items_more_than_amount_and_price(df, 5, 10.0) == [1443, 1559, 1660]
+    @test DataFramesKoans.most_ordered_item(df) == ("Chicken Bowl", 761)
+end
+
 using PythonInterop
 @testset "Python Interop" begin
     @test PythonInterop.py_sinpi(0) == 0
