@@ -1,10 +1,11 @@
 module ComplexNumberKoans
+
 #=
     Julia has a predefined type for complex numbers, where the constant "im" is
     interpreted as the complex number i. Also in Julia, most common operations
     with complex are already defined. Here is some useful documentation regarding
     complex numbers in Julia.
-     - https://docs.julialang.org/en/v1/manual/complex-and-rational-numbers/
+    - https://docs.julialang.org/en/v1/manual/complex-and-rational-numbers/
 =#
 
 #=
@@ -16,13 +17,15 @@ function sum(x,y)
      Return the sum of the complex numbers x and y.
      Ex: x = 1 + 1im; y = 2 + 3im; return 3 + 4im.
     =#
+    return x+y
 end
 
 function substract(x,y)
-    #=
+   #=
      Return the substraction of the complex numbers x and y.
      Ex: x = 1 + 1im; y = 2 + 3im; return -1 - 2im.
     =#
+    return x-y
 end
 
 function multiplication(x,y)
@@ -32,6 +35,7 @@ function multiplication(x,y)
         - https://en.wikipedia.org/wiki/Complex_number#Multiplication
      Ex: x = 1 + 1im; y = 2 + 3im; return -1 + 5im.
     =#
+    return x*y
 end
 
 function division(x,y)
@@ -41,6 +45,7 @@ function division(x,y)
         - https://en.wikipedia.org/wiki/Complex_number#Reciprocal_and_division
      Ex: x = 1 - 1im; y = 4 + 4im ; return 0 - 0.25im
     =#
+    return x/y
 end
 
 function power(x, y)
@@ -50,6 +55,7 @@ function power(x, y)
         - https://en.wikipedia.org/wiki/Complex_number#Exponentiation
     Ex: x = 1im; y = 2; return -1.
     =#
+    return x^y
 end
 
 function square_root(x)
@@ -59,6 +65,7 @@ function square_root(x)
         - https://en.wikipedia.org/wiki/Complex_number#Square_root
      Ex: x = 4im; return ≈ 1.414 + 1.414im (sqrt(2) + sqrt(2)im)
     =#
+    return sqrt(x)
 end
 
 function real_part(x)
@@ -68,6 +75,7 @@ function real_part(x)
         - https://en.wikipedia.org/wiki/Complex_number
      Ex: x = 2 + 4im; return 2.
     =#
+    return real(x)
 end
 
 function imaginary_part(x)
@@ -77,6 +85,7 @@ function imaginary_part(x)
         - https://en.wikipedia.org/wiki/Complex_number
      Ex: x = 2 + 4im; return 4.
     =#
+    return imag(x)
 end
 
 function conjugate(x)
@@ -86,6 +95,7 @@ function conjugate(x)
         - https://en.wikipedia.org/wiki/Complex_number#Conjugate
      Ex: x = 2 + 4im; return 2 - 4im.
     =#
+    return conj(x)
 end
 
 function absolute_value(x)
@@ -95,6 +105,7 @@ function absolute_value(x)
         - https://en.wikipedia.org/wiki/Complex_number#Modulus_and_argument
      Ex: x = 3 + 4im; return 5.
     =#
+    return abs(x)
 end
 
 function angle_in_radians(x)
@@ -104,6 +115,8 @@ function angle_in_radians(x)
         - https://en.wikipedia.org/wiki/Complex_number#Modulus_and_argument
      Ex: x = 4im; return ≈ 1.57 (pi/2).
     =#
+    return angle(x)
 end
 
 end
+
